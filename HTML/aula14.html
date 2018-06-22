@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+        <script type="text/javascript">
+
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(51.5, -0.12),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+
+        </script>
+    </head>
+    <body onload="myMap()">
+        <h1>Meu primeiro mapa</h1>
+
+        <button onclick="myMap()">Carregar</button>
+
+        <div id="map" style="width:500px;height:500px"></div>
+
+    </body>
+</html>

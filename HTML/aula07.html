@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script type="text/javascript">
+            function Incrementa(){
+                document.getElementById('nota').value += 10;
+            }
+
+            function Decrementa(){
+                document.getElementById('nota').value -= 10;
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <form action="#" method="GET">
+
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <input type="radio" id="id1" name="click">
+                <input type="radio" id="id2" name="click">
+                <label for="radio">Click me</label>
+                <input type="text" name="nome" placeholder="Digite seu nome aqui">
+            </fieldset>
+
+            <input list="browsers" />
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Internet Explorer">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+
+            <!-- O segundo valor estará selecionado inicialmente -->
+            <select name="select">
+                <option value="valor1" selected>Valor 1</option>
+                <option value="valor2">Valor 2</option>
+                <option value="valor3">Valor 3</option>
+            </select>
+
+            <br>
+
+            <textarea name="textarea" rows="10" cols="50" maxlength="255">Write something here</textarea>
+
+            <br>
+
+            0<input type="range" name="b" value="50" />100 +<input type="number" name="a" value="10" /> =
+            <output name="result">110</output>
+
+            <br>
+            <br>
+
+            <progress value="70" max="100" id='nota'>70 %</progress>
+            <button onclick="Incrementa()">Incrementa</button>
+            <button onclick="Decrementa()">Decrementa</button>
+
+        <!--    <h1 onmouseover="alert('Mouse over')">Mouse alerta</h1> -->
+
+            <h1 onmouseout="Decrementa()" onmouseover="Incrementa()">Decrementa</h1>
+
+            <br>
+            <br>
+
+            <input type="checkbox" name="my_checkbox"><br>
+            <input type="checkbox" name="my_checkbox"><br>
+            <input type="color" name="color"><br>
+            <input type="date" name="date"><br>
+            <input type="datetime" name="datetime"><br>
+            <input type="month" name="month"><br>
+            <input type="password" name="pwd"><br>
+            <input type="email" name="email" required><br>
+
+            Select a file <input type="file" name="img"><br>
+            <input type="range" name="points" min="0" max="100"><br>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+    </body>
+</html>

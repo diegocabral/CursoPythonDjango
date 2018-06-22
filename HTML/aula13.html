@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript">
+        
+            function salvar(){
+                if (typeof(Storage) !== "undefined") {
+                    localStorage.setItem('nome', 'Programe Facil');
+                } else {
+                    alert("Seu navegador não suporta WebStorage");
+                }
+            }
+
+            function ler(){
+                if(typeof(Storage) !== "undefined"){
+                    document.getElementById("resultado").innerHTML = localStorage.getItem("nome");
+                } else {
+                    alert("Seu navegador não suporta WebStorage");
+                }
+            }
+
+            function remover(){
+                if(typeof(Storage) !== "undefined"){
+                    localStorage.removeItem("nome");
+                } else {
+                    alert("Seu navegador não suporta WebStorage");
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <div id="resultado"></div>
+
+        <button onclick="salvar()">Salvar</button>
+        <br>
+        <button onclick="ler()">Ler</button>
+        <br>
+        <button onclick="remover()">Remover</button>
+
+    </body>
+</html>
